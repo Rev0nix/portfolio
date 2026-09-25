@@ -29,7 +29,7 @@ function Contact() {
 
         <Magnetic strength={0.18}>
   <a
-    href="mailto:your-email@example.com"
+    href="mailto:revanthhmgowda@gmail.com"
     className="contact-button"
   >
     START A CONVERSATION
