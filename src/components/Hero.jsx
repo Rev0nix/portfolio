@@ -1,10 +1,15 @@
 import { motion } from "framer-motion";
 import Magnetic from "./Magnetic";
 import HeroScene from "./HeroScene";
+import StarField from "./StarField";
 
 function Hero() {
   return (
     <section className="hero">
+
+      <div className="hero-stars">
+        <StarField />
+      </div>
 
       {/* 3D HERO SCENE */}
       <div className="hero-scene">

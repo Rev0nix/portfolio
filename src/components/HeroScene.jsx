@@ -1,5 +1,5 @@
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Float, Sparkles } from "@react-three/drei";
+import { Float } from "@react-three/drei";
 import { useRef } from "react";
 
 function Planet() {
@@ -117,14 +117,6 @@ function Scene() {
         color="#ff7200"
       />
 
-      {/* PARTICLES */}
-      <Sparkles
-        count={180}
-        scale={[12, 9, 8]}
-        size={1.7}
-        speed={0.18}
-        color="#ff5a00"
-      />
 
       <Planet />
     </>
