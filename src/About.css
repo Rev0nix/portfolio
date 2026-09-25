@@ -125,7 +125,13 @@
 
 @media (max-width: 800px) {
   .about-section {
-    padding: 90px 25px 35px;
+    padding: 85px 20px 45px;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .about-top {
+    width: 100%;
   }
 
   .about-top span:last-child {
@@ -133,21 +139,124 @@
   }
 
   .about-content {
+    width: 100%;
+    max-width: 100%;
+    margin: 75px 0;
+    display: grid;
     grid-template-columns: 1fr;
-    gap: 70px;
-    margin: 90px auto;
+    gap: 50px;
+  }
+
+  .about-heading {
+    width: 100%;
+    min-width: 0;
   }
 
   .about-heading h2 {
-    font-size: 17vw;
+    width: 100%;
+    max-width: 100%;
+
+    margin: 0;
+
+    font-size: 13.5vw;
+    line-height: 0.84;
+    letter-spacing: -5px;
+
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+
+  .about-text {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .about-big-text {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 28px;
+
+    font-size: 18px;
+    line-height: 1.55;
+
+    overflow-wrap: break-word;
+  }
+
+  .about-text > p:not(.about-big-text) {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: 13px;
+    line-height: 1.75;
+
+    overflow-wrap: break-word;
+  }
+
+  .about-details {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 28px 20px;
+
+    margin-top: 45px;
+    padding-top: 22px;
+  }
+
+  .about-details div {
+    min-width: 0;
+  }
+
+  .about-details div:last-child {
+    grid-column: 1 / -1;
+  }
+
+  .about-details strong {
+    font-size: 10px;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+
+    overflow-wrap: break-word;
+  }
+
+  .about-line {
+    width: 100%;
+    margin-top: 40px;
+
+    font-size: 8px;
+    letter-spacing: 3px;
+  }
+
+  .about-line span:last-child {
+    font-size: 15px;
+  }
+}
+
+/* Extra-small phones */
+
+@media (max-width: 420px) {
+  .about-section {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .about-heading h2 {
+    font-size: 13vw;
     letter-spacing: -4px;
   }
 
   .about-big-text {
-    font-size: 21px;
+    font-size: 17px;
   }
 
   .about-details {
-    gap: 30px;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .about-details div:last-child {
+    grid-column: auto;
   }
 }

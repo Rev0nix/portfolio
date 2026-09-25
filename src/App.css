@@ -514,11 +514,22 @@ a {
    MOBILE
 ========================================= */
 
+/* =========================================
+   FINAL MOBILE STABILIZATION
+   ========================================= */
+
 @media (max-width: 900px) {
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
 
   .navbar {
-    height: 75px;
-
+    width: 100%;
+    height: 72px;
     padding: 0 20px;
   }
 
@@ -527,49 +538,113 @@ a {
   }
 
   .hero {
-    padding: 75px 20px 30px;
-  }
-
-  .hero-top {
-    padding-top: 20px;
-  }
-
-  .hero-top span:last-child {
-    display: none;
+    width: 100%;
+    min-height: 100svh;
+    padding: 100px 20px 55px;
+    overflow: hidden;
   }
 
   .hero-content {
-    min-height: 80vh;
+    width: 100%;
+    min-width: 0;
+    min-height: 0;
   }
 
   .hero-text {
     width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    min-width: 0;
   }
 
   .hero h1 {
-    font-size: 17vw;
+    width: 100%;
+    max-width: 100%;
 
-    letter-spacing: -5px;
+    font-size: clamp(58px, 17vw, 92px);
+    line-height: 0.82;
+    letter-spacing: -0.06em;
+
+    overflow-wrap: normal;
   }
 
   .hero h1 span {
-    margin-left: 12vw;
+    margin-top: 15px;
+    margin-left: 0;
 
-    letter-spacing: -4px;
+    font-size: 0.9em;
+    letter-spacing: -0.05em;
+  }
+
+  .hero-intro {
+    max-width: 100%;
+    font-size: 7px;
+    letter-spacing: 1.8px;
+  }
+
+  .description {
+    width: 100%;
+    max-width: 310px;
+
+    margin-top: 30px;
+
+    font-size: 13px;
+    line-height: 1.65;
   }
 
   .hero-scene {
-    width: 100vw;
-    height: 65vh;
+    width: 72vw;
+    height: 40vh;
 
-    right: -20vw;
-    top: 16%;
+    right: -18vw;
+    top: 33%;
 
-    opacity: 0.8;
+    opacity: 0.42;
   }
 
   .hero-bottom {
     left: 20px;
     right: 20px;
+    bottom: 22px;
+
+    width: calc(100% - 40px);
+  }
+
+  .hero-bottom > span {
+    display: none;
+  }
+
+  section {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 500px) {
+  .navbar {
+    padding: 0 18px;
+  }
+
+  .hero {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+
+  .hero-top {
+    left: 18px;
+    right: 18px;
+  }
+
+  .hero h1 {
+    font-size: 16vw;
+  }
+
+  .hero-scene {
+    width: 68vw;
+    height: 36vh;
+
+    right: -16vw;
+    top: 36%;
+
+    opacity: 0.35;
   }
 }

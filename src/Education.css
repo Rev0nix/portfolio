@@ -340,20 +340,152 @@
 
 /* MOBILE */
 
-@media (max-width: 500px) {
+/* MOBILE */
 
+@media (max-width: 900px) {
   .education-section {
-    padding: 80px 20px 40px;
+    width: 100%;
+    padding: 90px 20px 50px;
+    overflow: hidden;
+  }
+
+  .education-header {
+    width: 100%;
+  }
+
+  .education-header span:last-child {
+    display: none;
+  }
+
+  .education-intro {
+    width: 100%;
+    max-width: 100%;
+    margin: 70px 0 60px;
+  }
+
+  .education-label {
+    margin-bottom: 22px;
+
+    font-size: 8px;
+    letter-spacing: 4px;
   }
 
   .education-intro h2 {
-    font-size: 20vw;
+    width: 100%;
+    max-width: 100%;
 
+    font-size: 14.5vw;
+    line-height: 0.8;
     letter-spacing: -5px;
+
+    overflow-wrap: normal;
+  }
+
+  .education-intro p {
+    width: 100%;
+    max-width: 320px;
+
+    margin-top: 30px;
+
+    font-size: 13px;
+    line-height: 1.7;
+  }
+
+  .education-timeline {
+    width: 100%;
+    max-width: 100%;
   }
 
   .education-item {
-    grid-template-columns: 35px 15px 1fr;
+    width: 100%;
+
+    grid-template-columns: 30px 14px minmax(0, 1fr) 38px;
+
+    min-height: 160px;
+  }
+
+  .education-index {
+    padding-top: 25px;
+
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
+
+  .education-content {
+    min-width: 0;
+    padding: 25px 8px;
+  }
+
+  .education-level {
+    margin-bottom: 12px;
+
+    font-size: 8px;
+    letter-spacing: 2.5px;
+  }
+
+  .education-content h3 {
+    width: 100%;
+    max-width: 100%;
+
+    font-size: clamp(23px, 6.8vw, 38px);
+    line-height: 0.95;
+    letter-spacing: -1px;
+
+    overflow-wrap: break-word;
+  }
+
+  .education-content p {
+    margin-top: 14px;
+
+    font-size: 10px;
+    line-height: 1.6;
+
+    overflow-wrap: break-word;
+  }
+
+  .education-arrow {
+    width: 32px;
+    height: 32px;
+
+    font-size: 14px;
+  }
+
+  .education-footer {
+    width: 100%;
+    max-width: 100%;
+
+    margin-top: 55px;
+
+    font-size: 7px;
+    letter-spacing: 3px;
+  }
+
+  .education-footer span:last-child {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .education-section {
+    padding: 75px 18px 40px;
+  }
+
+  .education-intro {
+    margin-top: 58px;
+  }
+
+  .education-intro h2 {
+    font-size: 14vw;
+    letter-spacing: -4px;
+  }
+
+  .education-intro p {
+    max-width: 290px;
+    font-size: 12.5px;
+  }
+
+  .education-item {
+    grid-template-columns: 26px 12px minmax(0, 1fr);
   }
 
   .education-arrow {
@@ -361,14 +493,14 @@
   }
 
   .education-content {
-    padding: 25px 10px;
+    padding: 22px 7px;
   }
 
   .education-content h3 {
-    font-size: 8vw;
+    font-size: 7vw;
   }
 
   .education-content p {
-    font-size: 11px;
+    font-size: 10px;
   }
 }

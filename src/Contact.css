@@ -284,31 +284,136 @@
 
 /* MOBILE */
 
-@media (max-width: 500px) {
+/* MOBILE */
 
+@media (max-width: 900px) {
   .contact-section {
-    padding: 75px 20px 25px;
+    width: 100%;
+    min-height: 90svh;
+
+    padding: 90px 20px 30px;
+
+    overflow: hidden;
+  }
+
+  .contact-top {
+    width: 100%;
+  }
+
+  .contact-top span:last-child {
+    display: none;
+  }
+
+  .contact-main {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .contact-label {
+    margin-bottom: 22px;
+
+    font-size: 8px;
+    letter-spacing: 4px;
   }
 
   .contact-main h2 {
-    font-size: 25vw;
+    width: 100%;
+    max-width: 100%;
 
-    letter-spacing: -5px;
+    margin: 0;
+
+    font-size: 22vw;
+    line-height: 0.82;
+    letter-spacing: -6px;
+
+    overflow-wrap: normal;
   }
 
   .contact-description {
+    width: 100%;
+    max-width: 320px;
+
+    margin-top: 38px;
+
     font-size: 13px;
+    line-height: 1.7;
   }
 
   .contact-button {
     width: 100%;
+    max-width: 340px;
+
+    margin-top: 28px;
 
     justify-content: space-between;
+
+    padding: 15px 18px;
+
+    font-size: 8px;
+    letter-spacing: 2.5px;
+  }
+
+  .contact-button span {
+    font-size: 16px;
+  }
+
+  .contact-links {
+    width: 100%;
+
+    margin-top: 50px;
+    padding-top: 18px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 18px 22px;
+  }
+
+  .contact-links a {
+    font-size: 8px;
+    letter-spacing: 2px;
   }
 
   .contact-footer {
-    flex-direction: column;
+    width: 100%;
 
-    gap: 12px;
+    margin-top: 45px;
+    padding-top: 16px;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 10px;
+
+    font-size: 7px;
+    letter-spacing: 3px;
+  }
+
+  .contact-footer span:nth-child(2) {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .contact-section {
+    padding: 75px 18px 25px;
+  }
+
+  .contact-main h2 {
+    font-size: 23vw;
+    letter-spacing: -5px;
+  }
+
+  .contact-description {
+    max-width: 290px;
+    font-size: 12.5px;
+  }
+
+  .contact-button {
+    max-width: 100%;
+  }
+
+  .contact-links {
+    gap: 16px 18px;
   }
 }

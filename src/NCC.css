@@ -299,10 +299,17 @@
 
 /* MOBILE */
 
-@media (max-width: 900px) {
+/* MOBILE */
 
+@media (max-width: 900px) {
   .ncc-section {
-    padding: 100px 25px 50px;
+    width: 100%;
+    padding: 90px 20px 50px;
+    overflow: hidden;
+  }
+
+  .ncc-header {
+    width: 100%;
   }
 
   .ncc-header span:last-child {
@@ -310,38 +317,166 @@
   }
 
   .ncc-hero {
+    width: 100%;
+    max-width: 100%;
+
     grid-template-columns: 1fr;
+    gap: 42px;
 
-    gap: 60px;
-
-    margin-top: 80px;
+    margin: 70px 0 65px;
   }
 
   .ncc-year {
-    max-width: 150px;
+    width: fit-content;
+    padding-left: 16px;
   }
 
   .ncc-year strong {
-    font-size: 75px;
+    margin: 12px 0 5px;
+    font-size: 72px;
+  }
+
+  .ncc-title {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .ncc-title p:first-child {
+    margin-bottom: 20px;
+    font-size: 8px;
+    letter-spacing: 4px;
   }
 
   .ncc-title h2 {
-    font-size: 19vw;
+    width: 100%;
+    max-width: 100%;
 
-    letter-spacing: -6px;
+    font-size: 14.5vw;
+    line-height: 0.8;
+    letter-spacing: -5px;
+
+    overflow-wrap: normal;
+  }
+
+  .ncc-description {
+    width: 100%;
+    max-width: 330px;
+
+    margin-top: 32px;
+
+    font-size: 13px;
+    line-height: 1.7;
   }
 
   .ncc-grid {
+    width: 100%;
+    max-width: 100%;
+
     grid-template-columns: 1fr;
+  }
+
+  .ncc-card {
+    width: 100%;
+    min-height: 150px;
+
+    padding: 24px 0;
+
+    gap: 16px;
   }
 
   .ncc-card:nth-child(odd) {
     border-right: none;
   }
 
-  .ncc-bottom {
-    grid-template-columns: 1fr;
+  .ncc-number {
+    flex-shrink: 0;
+    font-size: 8px;
+    letter-spacing: 2px;
+  }
 
+  .ncc-card h3 {
+    min-width: 0;
+
+    font-size: clamp(23px, 7vw, 38px);
+    line-height: 0.95;
+
+    overflow-wrap: break-word;
+  }
+
+  .ncc-card p {
+    margin-top: 10px;
+
+    font-size: 9px;
+    line-height: 1.5;
+    letter-spacing: 1.5px;
+  }
+
+  .ncc-plus {
+    flex-shrink: 0;
+
+    width: 34px;
+    height: 34px;
+
+    font-size: 16px;
+  }
+
+  .ncc-bottom {
+    width: 100%;
+    max-width: 100%;
+
+    margin-top: 55px;
+
+    grid-template-columns: 1fr;
     gap: 25px;
+  }
+
+  .ncc-bottom strong {
+    line-height: 1.5;
+    overflow-wrap: break-word;
+  }
+}
+
+@media (max-width: 500px) {
+  .ncc-section {
+    padding: 75px 18px 40px;
+  }
+
+  .ncc-hero {
+    margin-top: 58px;
+  }
+
+  .ncc-year {
+    padding-left: 13px;
+  }
+
+  .ncc-year strong {
+    font-size: 62px;
+  }
+
+  .ncc-title h2 {
+    font-size: 14vw;
+    letter-spacing: -4px;
+  }
+
+  .ncc-description {
+    max-width: 300px;
+    font-size: 12.5px;
+  }
+
+  .ncc-card {
+    padding: 22px 0;
+  }
+
+  .ncc-card h3 {
+    font-size: 7vw;
+  }
+
+  .ncc-card p {
+    font-size: 8px;
+  }
+
+  .ncc-plus {
+    width: 32px;
+    height: 32px;
   }
 }
