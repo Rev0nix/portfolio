@@ -1,0 +1,410 @@
+/* =========================================
+   EXPERIENCE / DIGITAL WORLDS
+========================================= */
+
+.experience-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 120px 6vw 45px;
+
+  background:
+    radial-gradient(
+      circle at 72% 48%,
+      rgba(255, 35, 0, 0.09),
+      transparent 35%
+    ),
+    #020202;
+
+  color: #f5f5f5;
+  overflow: hidden;
+}
+
+
+/* =========================================
+   BACKGROUND RED GLOW
+========================================= */
+
+.experience-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 900px;
+  height: 900px;
+
+  right: -320px;
+  top: 5%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 35, 0, 0.16),
+    rgba(120, 0, 0, 0.06) 38%,
+    transparent 70%
+  );
+
+  filter: blur(25px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.experience-header {
+  position: relative;
+  z-index: 10;
+
+  display: flex;
+  justify-content: space-between;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+  padding-top: 18px;
+
+  color: #555;
+
+  font-size: 9px;
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.experience-layout {
+  position: relative;
+  z-index: 5;
+
+  width: 100%;
+  max-width: 1500px;
+
+  min-height: 700px;
+
+  margin: 55px auto 0;
+
+  display: grid;
+
+  grid-template-columns: 0.9fr 1.1fr;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+
+/* =========================================
+   TEXT SIDE
+========================================= */
+
+.experience-copy {
+  position: relative;
+  z-index: 20;
+}
+
+
+/* SMALL ORANGE TITLE */
+
+.experience-label {
+  margin-bottom: 28px;
+
+  color: #ff4d00;
+
+  font-size: 10px;
+
+  letter-spacing: 6px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   DIGITAL WORLDS
+========================================= */
+
+.experience-copy h2 {
+  margin: 0;
+
+  font-size: clamp(70px, 9vw, 155px);
+
+  line-height: 0.78;
+
+  letter-spacing: -7px;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+
+/* OUTLINE WORD */
+
+.experience-copy h2 span {
+  display: block;
+
+  color: transparent;
+
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.35);
+
+  margin-top: 4px;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.experience-description {
+  max-width: 390px;
+
+  margin-top: 48px;
+
+  color: #707070;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+
+  letter-spacing: 0.2px;
+}
+
+
+/* =========================================
+   TECHNOLOGY TAGS
+========================================= */
+
+.experience-meta {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+
+  margin-top: 35px;
+}
+
+.experience-meta span {
+  border: 1px solid #292929;
+
+  padding: 9px 13px;
+
+  color: #777;
+
+  font-size: 8px;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+
+  transition: 0.3s ease;
+}
+
+.experience-meta span:hover {
+  color: #ff4d00;
+
+  border-color: #ff4d00;
+
+  background: rgba(255, 60, 0, 0.04);
+}
+
+
+/* =========================================
+   3D CANVAS
+========================================= */
+
+.canvas-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  height: 650px;
+
+  margin-left: -20px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+
+/* React Three Fiber Canvas */
+
+.canvas-wrapper canvas {
+  width: 100% !important;
+  height: 100% !important;
+
+  display: block;
+}
+
+
+/* =========================================
+   CANVAS LABEL
+========================================= */
+
+.canvas-label {
+  position: absolute;
+
+  right: 25px;
+  bottom: 25px;
+
+  color: #444;
+
+  font-size: 8px;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.experience-footer {
+  position: relative;
+
+  z-index: 10;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+
+  padding-top: 17px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  color: #4d4d4d;
+
+  font-size: 8px;
+
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+}
+
+.experience-footer span:last-child {
+  color: #ff4d00;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .experience-layout {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 0;
+  }
+
+  .experience-copy h2 {
+    font-size: clamp(65px, 9vw, 120px);
+
+    letter-spacing: -5px;
+  }
+
+  .canvas-wrapper {
+    height: 580px;
+
+    margin-left: 0;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .experience-section {
+    padding: 90px 25px 45px;
+  }
+
+  .experience-header span:last-child {
+    display: none;
+  }
+
+  .experience-layout {
+    grid-template-columns: 1fr;
+
+    min-height: auto;
+
+    margin-top: 65px;
+  }
+
+  .experience-copy h2 {
+    font-size: 18vw;
+
+    letter-spacing: -5px;
+
+    line-height: 0.82;
+  }
+
+  .experience-description {
+    margin-top: 35px;
+  }
+
+  .canvas-wrapper {
+    height: 500px;
+
+    margin-left: 0;
+
+    margin-top: -20px;
+  }
+
+  .experience-footer {
+    margin-top: 10px;
+  }
+
+  .experience-footer span:last-child {
+    display: none;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 500px) {
+
+  .experience-section {
+    padding: 75px 20px 35px;
+  }
+
+  .experience-label {
+    font-size: 8px;
+
+    letter-spacing: 4px;
+  }
+
+  .experience-copy h2 {
+    font-size: 20vw;
+
+    letter-spacing: -4px;
+  }
+
+  .experience-description {
+    max-width: 330px;
+
+    font-size: 13px;
+  }
+
+  .canvas-wrapper {
+    height: 420px;
+  }
+}

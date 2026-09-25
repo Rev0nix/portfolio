@@ -1,0 +1,575 @@
+/* =========================================
+   GLOBAL
+========================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: #222020;
+  scroll-behavior: auto;
+}
+
+body {
+  margin: 0;
+  background: #020202;
+  color: #dad5d5;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 90px;
+
+  padding: 0 6vw;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 100;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  background: rgba(18, 16, 16, 0.72);
+
+  backdrop-filter: blur(12px);
+}
+
+.logo {
+  flex-shrink: 0;
+
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: #ff4d00;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 42px;
+
+  margin: 0 auto;
+}
+
+.nav-links a {
+  display: inline-block;
+
+  white-space: nowrap;
+
+  color: rgba(255, 255, 255, 0.65);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+
+  transition:
+    color 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff4d00;
+}
+
+.talk,
+.contact-link {
+  flex-shrink: 0;
+
+  white-space: nowrap;
+
+  color: #f5f5f5;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  text-transform: uppercase;
+}
+
+.talk:hover,
+.contact-link:hover {
+  color: #ff4d00;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: #f869099d;
+}
+
+.brand {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.brand span {
+  color: #9b4e2c;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+.nav-links a {
+  display: inline-block;
+
+  color: rgba(216, 102, 20, 0.65);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #c8630a;
+}
+
+.talk,
+.contact-link {
+  display: inline-block;
+
+  color: #84e60c;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+
+  transition: color 0.3s ease;
+}
+
+.talk:hover,
+.contact-link:hover {
+  color: #da5c26;
+}
+
+.contact-link span {
+  color: #a78913;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 90px 6vw 40px;
+
+  background:
+    radial-gradient(
+      circle at 78% 48%,
+      rgba(23, 22, 22, 0.08),
+      transparent 28%
+    ),
+  #121010;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   3D HERO SCENE
+========================================= */
+
+.hero-scene {
+  position: absolute;
+
+  width: 56vw;
+  height: 68vh;
+
+  right: -1vw;
+  top: 15%;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+.hero-scene::after {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  right: 12%;
+  top: 18%;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 70, 0, 0.12),
+    transparent 70%
+  );
+
+  filter: blur(60px);
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+.hero-scene canvas {
+  width: 100% !important;
+  height: 100% !important;
+
+  display: block;
+}
+
+
+/* =========================================
+   TOP INFO
+========================================= */
+
+.hero-top {
+  position: relative;
+
+  z-index: 10;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  padding-top: 30px;
+
+  color: rgba(255, 255, 255, 0.32);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 4px;
+}
+
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.hero-content {
+  position: relative;
+
+  z-index: 5;
+
+  min-height: 72vh;
+
+  display: flex;
+
+  align-items: center;
+}
+
+.hero-text {
+  position: relative;
+
+  z-index: 10;
+
+  width: 65%;
+
+  margin-left: 1%;
+}
+
+
+/* =========================================
+   ORANGE INTRO TEXT
+========================================= */
+
+.hero-intro {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+
+  margin-bottom: 30px;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 10px;
+
+  font-weight: 500;
+
+  letter-spacing: 3px;
+
+  line-height: 1.8;
+
+  text-transform: uppercase;
+}
+
+.hero-intro span:first-child {
+  color: #ff6a00;
+}
+
+.hero-intro span:last-child {
+  color: #ff3b00;
+}
+
+
+/* =========================================
+   NAME
+========================================= */
+
+.hero h1 {
+  margin: 0;
+
+  font-size: clamp(80px, 12vw, 185px);
+
+  line-height: 0.82;
+
+  letter-spacing: -7px;
+
+  font-weight: 900;
+
+  color: #f5f5f5;
+
+  position: relative;
+
+  z-index: 10;
+}
+
+.hero h1 span {
+  display: block;
+
+  margin-top: 28px;
+
+  margin-left: 145px;
+
+  color: transparent;
+
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.55);
+
+  font-size: 0.9em;
+
+  letter-spacing: -6px;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.description {
+  margin-top: 50px;
+
+  max-width: 400px;
+
+  color: rgba(255, 255, 255, 0.42);
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   HERO BOTTOM
+========================================= */
+
+.hero-bottom {
+  position: absolute;
+
+  left: 6vw;
+  right: 6vw;
+  bottom: 30px;
+
+  z-index: 10;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+
+  padding-top: 18px;
+
+  color: rgba(255, 255, 255, 0.32);
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 4px;
+}
+
+.explore {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 20px;
+
+  color: #f5f5f5;
+
+  font-family: "DM Mono", monospace;
+
+  font-size: 9px;
+
+  letter-spacing: 3px;
+}
+
+.explore strong {
+  width: 45px;
+  height: 45px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+
+  color: #ff4d00;
+
+  font-size: 16px;
+
+  font-weight: 400;
+
+  transition: all 0.3s ease;
+}
+
+.explore:hover strong {
+  background: #ff4d00;
+
+  border-color: #ff4d00;
+
+  color: #000;
+}
+
+
+/* =========================================
+   CINEMATIC ORANGE GLOW
+========================================= */
+
+.hero::after {
+  content: "";
+
+  position: absolute;
+
+  width: 600px;
+  height: 600px;
+
+  right: -250px;
+  bottom: -250px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 50, 0, 0.08);
+
+  filter: blur(120px);
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    height: 75px;
+
+    padding: 0 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    padding: 75px 20px 30px;
+  }
+
+  .hero-top {
+    padding-top: 20px;
+  }
+
+  .hero-top span:last-child {
+    display: none;
+  }
+
+  .hero-content {
+    min-height: 80vh;
+  }
+
+  .hero-text {
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 17vw;
+
+    letter-spacing: -5px;
+  }
+
+  .hero h1 span {
+    margin-left: 12vw;
+
+    letter-spacing: -4px;
+  }
+
+  .hero-scene {
+    width: 100vw;
+    height: 65vh;
+
+    right: -20vw;
+    top: 16%;
+
+    opacity: 0.8;
+  }
+
+  .hero-bottom {
+    left: 20px;
+    right: 20px;
+  }
+}

@@ -1,0 +1,303 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+
+  padding: 120px 6vw 60px;
+
+  background: #121010;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 650px;
+  height: 650px;
+  right: 4%;
+  top: 12%;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 65, 0, 0.055),
+    transparent 70%
+  );
+
+  filter: blur(45px);
+  pointer-events: none;
+}
+
+.hero-top {
+  position: absolute;
+  top: 120px;
+  left: 6vw;
+  right: 6vw;
+
+  display: flex;
+  justify-content: space-between;
+
+  z-index: 10;
+
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+
+  color: rgba(255, 255, 255, 0.38);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 10;
+
+  max-width: 900px;
+}
+
+.hero-intro {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  margin-bottom: 42px;
+
+  font-family: "DM Mono", monospace;
+  font-size: 10px;
+  letter-spacing: 3px;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.hero-title {
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  font-size: clamp(80px, 13vw, 190px);
+  line-height: 0.78;
+  letter-spacing: -0.075em;
+
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hero-title span {
+  display: block;
+}
+
+.hero-outline {
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.48);
+}
+
+.description {
+  max-width: 510px;
+
+  margin-top: 55px;
+
+  font-size: 16px;
+  line-height: 1.7;
+
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.hero-scene {
+  position: absolute;
+
+  width: 56vw;
+  height: 68vh;
+
+  right: -1vw;
+  top: 15%;
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+.hero-scene canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.hero-scene::after {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  right: 12%;
+  top: 18%;
+
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(255, 70, 0, 0.11),
+    transparent 70%
+  );
+
+  filter: blur(60px);
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+.hero-bottom {
+  position: absolute;
+
+  left: 6vw;
+  right: 6vw;
+  bottom: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  z-index: 10;
+
+  font-family: "DM Mono", monospace;
+  font-size: 9px;
+  letter-spacing: 3px;
+
+  color: rgba(255, 255, 255, 0.36);
+}
+
+.explore {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+
+  transition: color 0.3s ease;
+}
+
+.explore strong {
+  font-size: 14px;
+  font-weight: 400;
+  color: #ff4d00;
+}
+
+.explore:hover {
+  color: #ff4d00;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+  .hero {
+    padding-top: 110px;
+  }
+
+  .hero-title {
+    font-size: clamp(75px, 14vw, 150px);
+  }
+
+  .hero-scene {
+    width: 60vw;
+    height: 60vh;
+    right: -8vw;
+    top: 20%;
+    opacity: 0.85;
+  }
+
+  .description {
+    max-width: 430px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+  .hero {
+    min-height: 100svh;
+    padding: 120px 6vw 90px;
+    align-items: center;
+  }
+
+  .hero-top {
+    top: 95px;
+    left: 6vw;
+    right: 6vw;
+
+    font-size: 7px;
+    letter-spacing: 2px;
+  }
+
+  .hero-top span:last-child {
+    text-align: right;
+  }
+
+  .hero-intro {
+    margin-bottom: 30px;
+
+    font-size: 8px;
+    line-height: 1.5;
+    letter-spacing: 2px;
+  }
+
+  .hero-title {
+    font-size: clamp(62px, 18vw, 110px);
+    line-height: 0.8;
+    letter-spacing: -0.065em;
+  }
+
+  .description {
+    max-width: 320px;
+
+    margin-top: 38px;
+
+    font-size: 14px;
+    line-height: 1.65;
+  }
+
+  .hero-scene {
+    width: 90vw;
+    height: 48vh;
+
+    right: -24vw;
+    top: 28%;
+
+    opacity: 0.55;
+  }
+
+  .hero-scene::after {
+    width: 280px;
+    height: 280px;
+  }
+
+  .hero-bottom {
+    left: 6vw;
+    right: 6vw;
+    bottom: 28px;
+
+    font-size: 7px;
+    letter-spacing: 2px;
+  }
+
+  .hero-bottom > span {
+    display: none;
+  }
+
+  .explore {
+    margin-left: auto;
+  }
+}
